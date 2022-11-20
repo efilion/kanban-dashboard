@@ -1,0 +1,49 @@
+.container {
+    background-color: white;
+    border-radius: .25rem;
+    box-shadow: 0 1px 0 rgba(9,45,66,.25);
+    padding: .5rem;
+}
+
+.title {
+    color: #17394d;
+    margin-bottom: .75rem;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    color: #798d99;
+    width: .75rem;
+    margin-right: .5rem;
+}
+
+.tag {
+    font-size: .75rem;
+    padding: .125rem .5rem;
+    border-radius: .25rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: .75rem;
+    margin-right: .25rem;
+    display: inline-block;
+}
+
+.browserTag {
+    background-color: #c377e0;
+}
+
+.designTag {
+    background-color: #61bd4f;
+}
+
+.highPriorityTag {
+    background-color: #eb5a46;
+}
+
+.lowPriorityTag {
+    background-color: #00c2e0;
+}

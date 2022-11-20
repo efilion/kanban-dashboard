@@ -1,57 +1,22 @@
+import React from 'react';
 import Image from 'next/image'
+import Column from '../components/column/Column'
 import styles from './page.module.css'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js 13!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://beta.nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js 13</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Explore the Next.js 13 playground.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates/next.js/app-directory?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>Deploy your Next.js site to a public URL with Vercel.</p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
-    </div>
+    <main className={styles.main}>
+      <ul className={styles.column__list}>
+        <Column id={1} title={"Incoming Bugs"} cards={[
+          { id: 1, title: "Lightbox loading issue on Safari", tags: ["Browser"], description: "Something here" },
+          { id: 2, title: "Notifications Not Sending #4", tags: ["High Priority"] },
+          { id: 3, title: "Download icon rendering issue", tags: ["Design", "High Priority"], description: "Something more" },
+          { id: 4, title: "Tab to comment goes to wrong field", tags: ["Browser", "Low Priority"], description: "Here too" }
+        ]} />
+        <Column id={2} title={"In Progress"} cards={[
+          { id: 5, title: "Localization", tags: ["High Priority"], tasks: [{title: "Choose a PR agency", is_complete: true}, {title: "Create messaging guidelines", is_complete: false}, {title: "Create ad banners", is_complete: false}], members: [{name: "Man standing near balcony", avatar_url: "https://images.unsplash.com/photo-1521119989659-a83eee488004?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=664&q=80"}]}
+        ]} />
+      </ul>
+    </main>
   )
 }
