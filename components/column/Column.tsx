@@ -1,5 +1,5 @@
 import React from 'react';
-import Card, { CardProps } from '../card/Card';
+import Card, { CardData } from '../card/Card';
 import styles from './Column.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
@@ -7,7 +7,7 @@ import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 type ColumnProps = {
     id: number,
     title: String,
-    cards: CardProps[]
+    cards: CardData[]
 }
 function Column(props: ColumnProps) {
 

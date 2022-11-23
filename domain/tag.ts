@@ -1,0 +1,1 @@
+export type TagType = "Browser" | "Design" | "High Priority" | "Low Priority"
